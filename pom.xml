@@ -11,21 +11,21 @@
         为了方便以后的一些问题的讲解特地准备一个最精简的 SpringMVC+Spring+Spring Data JPA 框架整合，方便以后的一些问题的演示
     </description>
     <url>http://code.YouMeek.com</url>
-    
+
     <!--
     Spring Data JPA 资料：
-    官网：http://projects.spring.io/spring-data-jpa 
+    官网：http://projects.spring.io/spring-data-jpa
     官网文档：http://docs.spring.io/spring-data/jpa/docs/1.10.1.RELEASE/reference/html/
     http://blog.csdn.net/csujiangyu/article/details/48804731
     http://blog.csdn.net/luzhenyu111/article/details/43917947，很好
     http://blog.csdn.net/luckyzhoustar/article/details/49362951
-    
+
     ======================================================
-    
+
     hibernate 官网：http://hibernate.org/orm/downloads/
     -->
-    
-    
+
+
     <!-- 集中定义公用的依赖版本号 -->
     <!--版本变量设置 start-->
     <properties>
@@ -46,7 +46,7 @@
 
         <junit.version>4.11</junit.version>
         <mysql-connector.version>5.1.21</mysql-connector.version>
-        <druid.version>1.0.4</druid.version>
+        <druid.version>1.1.10</druid.version>
 
         <!--<slf4j.version>1.7.7</slf4j.version>-->
         <log4j.version>1.2.17</log4j.version>
@@ -169,7 +169,7 @@
             <version>${spring.version}</version>
         </dependency>
 
-        <!--这个jar 文件包含支持UI模版（Velocity，FreeMarker，JasperReports），邮件服务，脚本服务(JRuby)，缓存Cache（EHCache），任务计划Scheduling（uartz）方面的类。 外部依赖spring-context-->
+        <!--这个jar 文件包含支持UI模版（Velocity，FreeMarker，JasperReports），邮件服务，脚本服务(JRuby)，缓存Cache（EHCache），任务计划Scheduling（quartz）方面的类。 外部依赖spring-context-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context-support</artifactId>
@@ -196,15 +196,15 @@
 
         <!--下面两个提供对 AspectJ 的支持，是 spring-aspects 所需要依赖的-->
         <!--<dependency>-->
-            <!--<groupId>org.aspectj</groupId>-->
-            <!--<artifactId>aspectjweaver</artifactId>-->
-            <!--<version>${aspectjweaver.version}</version>-->
+        <!--<groupId>org.aspectj</groupId>-->
+        <!--<artifactId>aspectjweaver</artifactId>-->
+        <!--<version>${aspectjweaver.version}</version>-->
         <!--</dependency>-->
-        
+
         <!--<dependency>-->
-            <!--<groupId>org.aspectj</groupId>-->
-            <!--<artifactId>aspectjrt</artifactId>-->
-            <!--<version>${aspectjrt.version}</version>-->
+        <!--<groupId>org.aspectj</groupId>-->
+        <!--<artifactId>aspectjrt</artifactId>-->
+        <!--<version>${aspectjrt.version}</version>-->
         <!--</dependency>-->
 
         <dependency>
@@ -213,7 +213,7 @@
             <version>${spring-data-jpa.version}</version>
         </dependency>
 
-        
+
         <!--hibernate 官网：http://hibernate.org/orm/downloads/-->
         <!--因为这里要使用的 hibernate 主要是配合 Spring Data jpa 使用，所以版本的要求最好看 Spring Data JPA 官网：http://projects.spring.io/spring-data-jpa/-->
         <dependency>
@@ -226,8 +226,8 @@
             <artifactId>hibernate-entitymanager</artifactId>
             <version>${hibernate.version}</version>
         </dependency>
-        
-        
+
+
         <!--ehcache 缓存 start-->
         <dependency>
             <groupId>net.sf.ehcache</groupId>
@@ -241,10 +241,10 @@
             <version>${hibernate.version}</version>
         </dependency>
         <!--ehcache 缓存 end-->
-        
+
         <!-- ############################################################### Spring 相关包 end ############################################################### -->
 
-        
+
 
         <!-- 导入Mysql数据库链接jar包 -->
         <dependency>
@@ -302,21 +302,21 @@
         <!--下面这三个是配套使用：http://blog.csdn.net/woshiwxw765/article/details/7624556-->
         <!--使用log4j start-->
         <!--<dependency>-->
-            <!--<groupId>log4j</groupId>-->
-            <!--<artifactId>log4j</artifactId>-->
-            <!--<version>${log4j.version}</version>-->
+        <!--<groupId>log4j</groupId>-->
+        <!--<artifactId>log4j</artifactId>-->
+        <!--<version>${log4j.version}</version>-->
         <!--</dependency>-->
 
         <!--<dependency>-->
-            <!--<groupId>org.slf4j</groupId>-->
-            <!--<artifactId>slf4j-api</artifactId>-->
-            <!--<version>${slf4j.version}</version>-->
+        <!--<groupId>org.slf4j</groupId>-->
+        <!--<artifactId>slf4j-api</artifactId>-->
+        <!--<version>${slf4j.version}</version>-->
         <!--</dependency>-->
 
         <!--<dependency>-->
-            <!--<groupId>org.slf4j</groupId>-->
-            <!--<artifactId>slf4j-log4j12</artifactId>-->
-            <!--<version>${slf4j.version}</version>-->
+        <!--<groupId>org.slf4j</groupId>-->
+        <!--<artifactId>slf4j-log4j12</artifactId>-->
+        <!--<version>${slf4j.version}</version>-->
         <!--</dependency>-->
         <!--使用log4j end-->
 
@@ -397,8 +397,8 @@
             <version>${httpclient.version}</version>
         </dependency>
         <!--常用工具类-整理-end-->
-        
-        
+
+
 
 
     </dependencies>

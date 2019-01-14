@@ -22,7 +22,7 @@
 
 <br>
 
-真实姓名：${user.sysUserRealName}
+手机号：${user.sysUserMobile}
 
 </body>
 </html>

@@ -1,11 +1,11 @@
 # 创建数据库，并创建权限用户
-CREATE DATABASE `ssm` CHARACTER SET utf8;
-CREATE USER 'ssm'@'%' IDENTIFIED BY 'ssm';
-GRANT ALL PRIVILEGES ON ssm.* TO 'ssm'@'%';
+CREATE DATABASE `ssjpa` CHARACTER SET utf8;
+CREATE USER 'ssjpa'@'%' IDENTIFIED BY 'ssjpa';
+GRANT ALL PRIVILEGES ON ssjpa.* TO 'ssjpa'@'%';
 FLUSH PRIVILEGES;
 
-
-
+use ssjpa;
+DROP TABLE IF EXISTS sys_user;
 CREATE TABLE `sys_user` (
   `sys_user_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `sys_user_login_name` varchar(50) NOT NULL,
